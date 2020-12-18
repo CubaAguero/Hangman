@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: Juego del Ahorcado ::</title>
+    <link rel="stylesheet" href="css/styles.css">   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
+    <!--<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/additional-methods.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <h1>Bienvenido al juego del Ahorcado</h1>
+        
+        <form class="form" id="form">
+            <div class="entrada">
+                <label for="name">Ingrese su Nombre: </label>
+                <input type="text" name="name" id="name" class="name"><br>
+            </div>
+            <input type="button" value="Jugar" id="jugar" class="jugar" disabled>
+        </form>
+
+    </header>
+
+    <main class="main" id="main">
+        <div class="hangman" id="hangman">
+            <img src="img/horca.svg" alt="horca" id="colgado">
+               
+        </div>
+      
+        <div class="conteiner">
+
+            <div class="palabra-adivinar" id="palabraAdivinar">
+                <div class="mostrar" id="mostrar">
+                    <p id="pista"></p>
+                    <p class="intentos">Intentos restantes: <span id="intentos"></span></p>
+                    <P id="palabraOculta"></P>
+                </div>
+                
+                <div class="ocultar" id="ocultar">
+                    <p class="mensaje" id="mensaje"></p>
+                    <button class="reiniciar" id="reiniciar" value="Reiniciar">Volver a Jugar</button>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="keyboard">
+                <div class="fila1" id="fila1">
+                    <button class="letra" id="letraQ" value="q" onclick="comprobar('q')">Q</button>
+                    <button class="letra" id="letraW" value="w" onclick="comprobar('w')">W</button>
+                    <button class="letra" id="letraE" value="e" onclick="comprobar('e')">E</button>
+                    <button class="letra" id="letraR" value="r" onclick="comprobar('r')">R</button>
+                    <button class="letra" id="letraT" value="t" onclick="comprobar('t')">T</button>
+                    <button class="letra" id="letraY" value="y" onclick="comprobar('y')">Y</button>
+                    <button class="letra" id="letraU" value="u" onclick="comprobar('u')">U</button>
+                    <button class="letra" id="letraI" value="i" onclick="comprobar('i')">I</button>
+                    <button class="letra" id="letraO" value="o" onclick="comprobar('o')">O</button>
+                    <button class="letra" id="letraP" value="p" onclick="comprobar('p')">P</button>
+                </div>
+                <div class="fila2" id="fila2">
+                    <button class="letra" id="letraA" value="a" onclick="comprobar('a')">A</button>
+                    <button class="letra" id="letraS" value="s" onclick="comprobar('s')">S</button>
+                    <button class="letra" id="letraD" value="d" onclick="comprobar('d')">D</button>
+                    <button class="letra" id="letraF" value="f" onclick="comprobar('f')">F</button>
+                    <button class="letra" id="letraG" value="g" onclick="comprobar('g')">G</button>
+                    <button class="letra" id="letraH" value="h" onclick="comprobar('h')">H</button>
+                    <button class="letra" id="letraJ" value="j" onclick="comprobar('j')">J</button>
+                    <button class="letra" id="letraK" value="k" onclick="comprobar('k')">K</button>
+                    <button class="letra" id="letraL" value="l" onclick="comprobar('l')">L</button>
+                </div>
+                <div class="fila3" id="fila3">
+                    <button class="letra" id="letraZ" value="z" onclick="comprobar('z')">Z</button>
+                    <button class="letra" id="letraX" value="x" onclick="comprobar('x')">X</button>
+                    <button class="letra" id="letraC" value="c" onclick="comprobar('c')">C</button>
+                    <button class="letra" id="letraV" value="v" onclick="comprobar('v')">V</button>
+                    <button class="letra" id="letraB" value="b" onclick="comprobar('b')">B</button>
+                    <button class="letra" id="letraN" value="n" onclick="comprobar('n')">N</button>
+                    <button class="letra" id="letraM" value="m" onclick="comprobar('m')">M</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+</body>
+</html>
